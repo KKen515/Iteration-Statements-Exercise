@@ -32,7 +32,6 @@
 
         public static void TwoNumbers()
 
-
         {
             Console.WriteLine("Choose a Number");
            int numOne = Convert.ToInt32(Console.ReadLine());
@@ -109,6 +108,7 @@
 
         public static void CanVote()
         {
+            bool canVote;
             Console.WriteLine("Please Enter your Age:");
             var canParse = int.TryParse(Console.ReadLine(), out int userAge);
 
@@ -122,10 +122,12 @@
             if (userAge >= 18)
             {
                 Console.WriteLine($"Congrats, {userAge} is old enough to vote!");
+                canVote = true;
             }
             else
             {
                 Console.WriteLine($"Sorry, {userAge} is not old enough to vote!");
+                canVote = false;
             }
 
         }
@@ -138,6 +140,7 @@
 
         public static void Range()
         {
+            bool IsInRange;
             Console.WriteLine("Please Enter a Number:");
             var canParse = int.TryParse(Console.ReadLine(), out int userNumber);
 
@@ -150,11 +153,13 @@
             if (userNumber <= 10 && userNumber >= -10)
             {
                 Console.WriteLine($"{userNumber} is in ten range!");
-                
+                IsInRange = true;
+
             }
             else
             {
                 Console.WriteLine($"{userNumber} is not in ten range!");
+                IsInRange = false;
             }
             
         }
