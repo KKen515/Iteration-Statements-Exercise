@@ -30,34 +30,34 @@
         //    - Method Signature: bool AreNumbersEqual(int num1, int num2)
         //    - Returns true if the numbers are equal, false otherwise.
 
-        public static void TwoNumbers()
+        public static bool TwoNumbers()
 
         {
             Console.WriteLine("Choose a Number");
-           int numOne = Convert.ToInt32(Console.ReadLine());
-           Console.WriteLine("Choose a Second Number");
-           int numTwo = Convert.ToInt32(Console.ReadLine());
-            bool areNumbersEqual; 
+            int numOne = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Choose a Second Number");
+            int numTwo = Convert.ToInt32(Console.ReadLine());
+            bool areNumbersEqual;
             if (numOne == numTwo)
             {
                 Console.WriteLine($"{numOne} and {numTwo} are the same!");
-                areNumbersEqual = true;
+               return areNumbersEqual = true;
 
             }
             else
             {
                 Console.WriteLine($"{numOne} and {numTwo} are not the same!");
-                areNumbersEqual = false;
-                
+               return areNumbersEqual = false;
+
             }
         }
-        
-        
+
+
         // 4. Write a method that checks if a given number is even or odd.
         //    - Method Signature: bool IsEven(int number)
         //    - Returns true if the number is even, false if odd.
 
-        public static void EvenOrOdd()
+        public static bool EvenOrOdd()
         {
             bool isEven;
             Console.WriteLine("Choose a Number");
@@ -66,12 +66,12 @@
             if (evenOrOddInput % 2 == 0)
             {
                 Console.WriteLine("Even");
-                isEven = true;
+                return isEven = true;
             }
             else
             {
                 Console.WriteLine("Odd");
-                isEven = false;
+                return isEven = false;
             }
         }
         
@@ -80,7 +80,7 @@
         //    - Method Signature: bool IsPositive(int number)
         //    - Returns true if the number is positive, false if negative.
 
-        public static void PositiveNumber()
+        public static bool PositiveNumber()
         {
             Console.WriteLine("Choose a Number");
             int number = Convert.ToInt32(Console.ReadLine());
@@ -89,12 +89,12 @@
             if (number > 0)
             {
                 Console.WriteLine("This Number is Positive");
-                isPositive = true;
+                return isPositive = true;
             }
             else
             {
                 Console.WriteLine("This Number is Negative");
-                isPositive = false;
+                return isPositive = false;
             }
             
             
@@ -106,7 +106,7 @@
         //    - Returns true if the candidate can vote, false otherwise.
         //    - Hint: Use `int.Parse()` or the safer `int.TryParse()` for extra practice in handling user input.
 
-        public static void CanVote()
+        public static bool CanVote()
         {
             bool canVote;
             Console.WriteLine("Please Enter your Age:");
@@ -122,12 +122,12 @@
             if (userAge >= 18)
             {
                 Console.WriteLine($"Congrats, {userAge} is old enough to vote!");
-                canVote = true;
+                return canVote = true;
             }
             else
             {
                 Console.WriteLine($"Sorry, {userAge} is not old enough to vote!");
-                canVote = false;
+                return canVote = false;
             }
 
         }
@@ -138,7 +138,7 @@
         //    - Method Signature: bool IsInRange(int number)
         //    - Returns true if the number is within the range, false otherwise.
 
-        public static void Range()
+        public static bool Range()
         {
             bool IsInRange;
             Console.WriteLine("Please Enter a Number:");
@@ -153,13 +153,13 @@
             if (userNumber <= 10 && userNumber >= -10)
             {
                 Console.WriteLine($"{userNumber} is in ten range!");
-                IsInRange = true;
+                return IsInRange = true;
 
             }
             else
             {
                 Console.WriteLine($"{userNumber} is not in ten range!");
-                IsInRange = false;
+                return IsInRange = false;
             }
             
         }
